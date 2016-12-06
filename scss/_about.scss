@@ -1,5 +1,8 @@
 .about {
     display: flex;
+    max-width: $mobile-breakpoint;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .author {
@@ -8,8 +11,16 @@
 
 @media (max-width: $mobile-breakpoint) {
     .author {
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
+        width: $mobile-breakpoint;
+        flex-wrap: wrap;
+        justify-content: none;
     }
+    .auth-img{
+        max-width: 180px;
+
+    }
+    .auth-details {
+        background-color: red;
+    }
+
 }
