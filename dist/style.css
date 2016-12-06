@@ -553,6 +553,57 @@ fieldset {
 .form-group {
   margin: 1em 0; }
 
+/*----------  Flex Helpers  ----------*/
+.flex {
+  display: flex; }
+
+.align-center {
+  align-items: center; }
+
+.justify-center {
+  justify-content: center; }
+
+.space-between {
+  justify-content: space-between; }
+
+.space-around {
+  justify-content: space-around; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.full-height {
+  height: 100%; }
+
+.align-around {
+  align-content: space-around; }
+
+.align-between {
+  align-content: space-between; }
+
+.flex-row {
+  flex-direction: row; }
+
+.flex-start {
+  align-self: flex-start; }
+
 /* Components */
 .meme-editor {
-  display: block; }
+  display: none; }
+
+.gallery {
+  display: flex; }
+
+.gallery-img {
+  width: 180px;
+  height: 180px; }
+
+img {
+  width: 180px;
+  height: 180px; }
+
+.about {
+  display: flex; }
+
+.author {
+  display: flex; }
