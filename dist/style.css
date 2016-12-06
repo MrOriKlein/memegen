@@ -485,10 +485,12 @@ body {
   padding: 0 1em; }
 
 .main-nav-bar {
-  border: solid 1px black; }
+  border: solid 1px black;
+  background-color: pink; }
 
 .main-display {
-  border: solid 1px black; }
+  border: solid 1px black;
+  background-color: yellow; }
 
 .gallery {
   border: solid 1px black; }
@@ -496,11 +498,15 @@ body {
 .words-display {
   border: solid 1px black; }
 
+.about {
+  background-color: green; }
+
 .author {
   border: solid 1px black; }
 
 .contact {
-  border: solid 1px black; }
+  border: solid 1px black;
+  background-color: red; }
 
 .footer {
   border: solid 1px black; }
@@ -548,3 +554,5 @@ fieldset {
   margin: 1em 0; }
 
 /* Components */
+.meme-editor {
+  display: block; }
