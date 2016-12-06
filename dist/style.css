@@ -470,7 +470,7 @@ template {
   --primary-font: Playfair;
   --secondary-font: Ubuntu;
   /* Colors */
-  --main-color: #black;
+  --main-color: black;
   --sections-bg: #f0f0f0; }
 
 /*----------  Containers  ----------*/
@@ -511,6 +511,10 @@ body {
 .footer {
   border: solid 1px black; }
 
+@media (max-width: 360px) {
+  .container {
+    max-width: 360px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -521,7 +525,7 @@ html {
   color: var(--main-color);
   font-family: var(--primary-font);
   font-size: 16px; }
-  @media (max-width: 642px) {
+  @media (max-width: 360px) {
     html {
       font-size: 14px; } }
 
@@ -588,22 +592,42 @@ fieldset {
   align-self: flex-start; }
 
 /* Components */
-.meme-editor {
-  display: none; }
-
 .gallery {
-  display: flex; }
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .gallery-img {
-  width: 180px;
-  height: 180px; }
+  width: 160px;
+  height: 160px;
+  margin: 40px; }
 
 img {
-  width: 180px;
-  height: 180px; }
+  width: 160px;
+  height: 160px; }
+
+@media (max-width: 360px) {
+  .gallery {
+    max-width: 360px;
+    justify-content: flex-start; }
+  .gallery-img {
+    border: 1px solid red;
+    max-width: 45%;
+    margin: 0px; }
+  .gallery-img img {
+    width: inherit; } }
+
+.meme-editor {
+  display: none; }
 
 .about {
   display: flex; }
 
 .author {
   display: flex; }
+
+@media (max-width: 360px) {
+  .author {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap; } }

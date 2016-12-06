@@ -50,3 +50,16 @@ body {
 // div {
   // border: 5px solid black;
 // }
+// @mixin breakpoint($name){
+//   @if $name == small-screen {
+//     @media only screen and (min-width: $small-breakpoint) {
+//       @content
+//     }
+//   }
+
+@media (max-width: $mobile-breakpoint) {
+  .container {
+    max-width: $mobile-breakpoint;
+  }
+
+}

@@ -1,5 +1,7 @@
+// Media query per Galaxy S5 - screen width
+
 $container-width: 1063px;
-$mobile-breakpoint: 642px;
+$mobile-breakpoint: 360px;
 
 :root {
   /* Layout */
@@ -9,8 +11,6 @@ $mobile-breakpoint: 642px;
   --primary-font: Playfair;
   --secondary-font: Ubuntu;
   /* Colors */
-  --main-color: #black;
+  --main-color: black;
   --sections-bg: #f0f0f0;
 }
-
-

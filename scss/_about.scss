@@ -5,3 +5,11 @@
 .author {
     display: flex;
 }
+
+@media (max-width: $mobile-breakpoint) {
+    .author {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+}
