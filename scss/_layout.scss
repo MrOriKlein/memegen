@@ -14,10 +14,12 @@ body {
 
 .main-nav-bar {
   border: solid 1px black;
+  background-color: pink;
 }
 
 .main-display {
   border: solid 1px black;
+  background-color: yellow;
 }
 
 .gallery {
@@ -28,12 +30,17 @@ body {
   border: solid 1px black;
 }
 
+.about {
+  background-color: green;
+}
+
 .author {
   border: solid 1px black;
 } 
 
 .contact {
   border: solid 1px black;
+  background-color: red;
 }
 
 .footer {
