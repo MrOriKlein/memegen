@@ -1,7 +1,41 @@
 /*----------  Containers  ----------*/
 
+body {
+  background-color: white;
+}
+
 .container {
+  border: solid 1px black;
+  background-color: white;
   width: var(--container-width);
   margin: 0 auto;
   padding: 0 1em;
+}
+
+.main-nav-bar {
+  border: solid 1px black;
+}
+
+.main-display {
+  border: solid 1px black;
+}
+
+.gallery {
+  border: solid 1px black;
+}
+
+.words-display {
+  border: solid 1px black;
+}
+
+.author {
+  border: solid 1px black;
+} 
+
+.contact {
+  border: solid 1px black;
+}
+
+.footer {
+  border: solid 1px black;
 }
