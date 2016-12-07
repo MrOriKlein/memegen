@@ -15,8 +15,24 @@
   font-weight: 400;
 }
 
+/*----------  Lato Font  ----------*/
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../assets/fonts/Lato2OFL/Lato-Regular.ttf'); 
+}
+
+
+
+/*----------  Maven pro Font  ----------*/
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: url('../assets/fonts/mavenPro/MavenPro-Regular.ttf'); 
+}
+
 .header {
-  font-size: rem(30px);
+  font-size: rem(8px);
 }
 
 /*----------  Ubunto Font  ----------*/
