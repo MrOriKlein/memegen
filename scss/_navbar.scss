@@ -1,11 +1,11 @@
-.main-nav-bar {
-  --main-nav-height: em(63px);  
-  height: var(--main-nav-height);
-  width: 100%;
-  background: var(--nav_bg); 
-}
+  .main-nav-bar {
+    --main-nav-height: em(63px);  
+    height: var(--main-nav-height);
+    width: 100%;
+    background: var(--nav_bg);
+  }
 
-}
+ 
 .main-nav__item {
   text-transform: uppercase;
   font-size: rem-calc(7px);
@@ -13,7 +13,27 @@
   color: var(--nav_bar_txtcolor);
 
 }
-.hovered-nav-item{
-    color: var(--hover_nav_item: #2f907c) ;
+.hover{
+    color: var(--hover_nav_item);
 
+}
+
+
+@media (max-width: $mobile-breakpoint) {
+    .main-nav-bar {
+      max-width:$mobile-breakpoint;    
+
+    } 
+    .main-nav__items {
+      align-items: center;
+      justify-content: space-around
+     
+    }
+  
+ 
+
+
+  
+   
+}
 }
