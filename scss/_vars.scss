@@ -8,9 +8,13 @@ $mobile-breakpoint: 360px;
   --container-width: $container-width;
   --inner-container-width: 900px;
   /* Fonts */
-  --primary-font: Playfair;
+  --primary-font: Lato-Regular;
   --secondary-font: Ubuntu;
   /* Colors */
   --main-color: black;
   --sections-bg: #f0f0f0;
+  --nav_bg: #292929;
+  --nav_bar_txtcolor: #fff;
+  --about_bg: #2eb398;
+  --form_enter_txt_bg: #454545;
 }
