@@ -1,17 +1,105 @@
-::-webkit-input-placeholder {
-  color: #626262;
-  font-size: rem(14px);
-  font-family: var(--primary-font);
+// ::-webkit-input-placeholder {
+//   color: #626262;
+//   font-size: rem(14px);
+//   font-family: var(--primary-font);
+// }
+
+// .form-control {
+//   border: none;
+//   border-bottom: 1px solid #000;
+//   background-color: transparent;
+//   width: 100%;
+//   padding: 0.5em 0.2em;
+// }
+
+// .form-group {
+//   margin: 1em 0;
+// }
+
+
+
+form {
+    background: --form_bg;
+    border: 1px solid black;
+    overflow: hidden; 
 }
 
-.form-control {
-  border: none;
-  border-bottom: 1px solid #000;
-  background-color: transparent;
-  width: 100%;
-  padding: 0.5em 0.2em;
+textarea{
+	background:var(--form_enter_txt_bg) no-repeat scroll 16px 16px; 
+    width: 276px;
+    height: 110px;
+    border: 1px solid black;
+    background-clip: padding-box; 
+    display:block;
+    color:#fff;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+    overflow:hidden;
 }
 
-.form-group {
-  margin: 1em 0;
+input {
+    width: 276px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.4);
+    background-clip: padding-box; 
+    display:block;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
 }
+
+input[type=submit] {
+    cursor:pointer;
+}
+
+input.name {
+	  	background:var(--form_enter_txt_bg) no-repeat scroll 16px 16px; 
+	  padding-left:45px;
+}
+
+input.email {
+	  	background:var(--form_enter_txt_bg) no-repeat scroll 16px 20px;
+	  padding-left:45px;
+}
+
+input.message {
+	  	background:var(--form_enter_txt_bg)  no-repeat scroll 16px 16px;
+	  padding-left:45px;
+}
+
+input:focus, textarea:focus { 
+	  background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  overflow: hidden; 
+}
+
+.btn {
+	  width: 138px;
+	  height: 44px;
+	  border-radius: 4px;
+	  float:right;
+    border: 1px solid #253737;
+    background: #416b68;
+    padding: 10.5px 21px;
+    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    text-shadow: #333333 0 1px 0;
+    color: #e1e1e1;
+}
+
+.btn:hover {
+    border: 1px solid #253737;
+    text-shadow: #333333 0 1px 0;
+    background: #416b68;
+    color: #fff;
+ }
+
+.btn:active {
+    margin-top:1px;
+    text-shadow: #333333 0 -1px 0;
+    border: 1px solid #253737;
+    background: #6da5a3;
+    color: #fff;
+   }
