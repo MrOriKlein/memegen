@@ -57,14 +57,14 @@ function drawOnCanvas() {
         gCtx.drawImage(img, 0, 0, 500, 360);
 
         gCtx.font = txtType1;
-        gCtx.txtAlign = gFonts.topTxt.align;
         gCtx.fillStyle = gFonts.topTxt.color;
-        gCtx.fillText(gFonts.topTxt.txt, 50, 80);
+        gCtx.textAlign = gFonts.topTxt.align;
+        gCtx.fillText(gFonts.topTxt.txt, 250, 80);
 
         gCtx.font = txtType2;
-        gCtx.txtAlign = gFonts.btmTxt.align;
+        gCtx.textAlign = gFonts.btmTxt.align;
         gCtx.fillStyle = gFonts.btmTxt.color;
-        gCtx.fillText(gFonts.btmTxt.txt, 50, 300);
+        gCtx.fillText(gFonts.btmTxt.txt, 250, 300);
     };
 }
 
