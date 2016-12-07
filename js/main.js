@@ -1,2 +1,2 @@
 'use strict';
-console.log('Hello Meme');
+console.log('Meme Generator');
