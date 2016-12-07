@@ -57,7 +57,7 @@ function drawOnCanvas() {
         gCtx.drawImage(img, 0, 0, 500, 360);
 
         gCtx.font = txtType1;
-        gCtx.settxtAlign = gFonts.topTxt.align;
+        gCtx.txtAlign = gFonts.topTxt.align;
         gCtx.fillStyle = gFonts.topTxt.color;
         gCtx.fillText(gFonts.topTxt.txt, 50, 80);
 
@@ -96,7 +96,7 @@ function setTxtType(htmlEl, fontId) {
 }
 
 function setTxtAlign(alignment, fontId) {
-    gFonts[fontId].align = alignment;
+    gFonts[fontId].align = '' + alignment;
     drawOnCanvas();
 }
 
