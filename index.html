@@ -65,17 +65,17 @@
                             <div class="dropdown">
                                 <img src="assets/gfx/toolbar/face-type.png" onclick="myFunction()" class="dropbtn" />
                                 <div id="myDropdown" class="dropdown-content">
-                                    <p onclick="setFontType(this)">Arial</p>
-                                    <p onclick="setFontType(this)">Courier</p>
-                                    <p onclick="setFontType(this)">Helvatica</p>
+                                    <p onclick="setTxtType(this, 'topTxt')">Arial</p>
+                                    <p onclick="setTxtType(this, 'topTxt')">Courier</p>
+                                    <p onclick="setTxtType(this, 'topTxt')">Helvatica</p>
                                 </div>
                             </div>
                             <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png"   class="edtbtn" onclick="incTxtSize('gCtxFont1')" />
-                            <img src="assets/gfx/toolbar/size-down.png" class="edtbtn" onclick="decTxtSize('gCtxFont1')" />
-                            <img src="assets/gfx/toolbar/align-left.png" />
-                            <img src="assets/gfx/toolbar/align-center.png" />
-                            <img src="assets/gfx/toolbar/align-right.png" />
+                            <img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="incTxtSize('topTxt')" />
+                            <img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="decTxtSize('topTxt')" />
+                            <img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign('left', 'topTxt')" />
+                            <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'topTxt')" />
+                            <img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign('right', 'topTxt')" />
                         </div>
                     </article>
                     <!--<article class="meme-txt">
