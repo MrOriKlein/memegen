@@ -16,13 +16,13 @@
 
         <nav class="main-nav-bar flex align-center justify-center">
 
-        <ul class="main-nav__items clean-list flex justify-center">
-          <li><a href="#" class="main-nav__item">Portfolio</a></li>
-          <li><a href="#" class="main-nav__item">About</a></li>
-          <li><a href="#" class="main-nav__item">Arrow</a></li>
-          <li><a href="#" class="main-nav__item">Blog</a></li>
-          <li><a href="#" class="main-nav__item">Get in Touch</a></li>
-        </ul>
+            <ul class="main-nav__items clean-list flex justify-center">
+                <li><a href="#" class="main-nav__item">Portfolio</a></li>
+                <li><a href="#" class="main-nav__item">About</a></li>
+                <li><a href="#" class="main-nav__item">Arrow</a></li>
+                <li><a href="#" class="main-nav__item">Blog</a></li>
+                <li><a href="#" class="main-nav__item">Get in Touch</a></li>
+            </ul>
         </nav>
 
         <!-- Gallery area -->
@@ -113,7 +113,14 @@
         <!-- Contact section -->
         <section class="contact-us flex space-between">
             <div class="contact-form">
-                <p>blah blah blah blah blah blah blah blah blah blah blah blah</p>
+            <!--form section-->
+            <form class="flex flex-wrap flex-coloumn">
+                <input name="name" placeholder="What is your name?" class="name" required />
+                <input name="emailaddress" placeholder="Your email?" class="email" type="email" required />
+                <textarea rows="4" cols="50" name="subject" placeholder="Write your message here..." class="message" required></textarea>
+                <input name="submit" class="btn" type="submit" value="Send" />
+            </form>
+             
             </div>
             <div class="contact-invite">
                 <div class="contact-description">We love to hear from you, tell us what you think.</div>
