@@ -1,0 +1,27 @@
+.contact-form {
+    width: 60%;
+    padding: 15px;
+}
+
+.contact-invite {
+    width: 40%;
+    padding: 15px;
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .contact-us {
+    justify-content: none;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    }
+    .contact-form {
+        background-color: darkorange;
+        width: 100%;
+        
+    }
+    .contact-invite {
+        
+        background-color: deeppink;
+        width: 100%;
+    }
+}
