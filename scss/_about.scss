@@ -1,12 +1,15 @@
 .about {
     display: flex;
-    max-width: $mobile-breakpoint;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .author {
-    display: flex;
+    width: 45%;
+}
+
+.auth-details {
+    justify-content: flex-start;
+    padding: 15px;
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -16,11 +19,13 @@
         justify-content: none;
     }
     .auth-img{
-        max-width: 180px;
+        max-width: 160px;
+        img {height: 160px;}
 
     }
     .auth-details {
         background-color: red;
+        width: 160px;
     }
 
 }
