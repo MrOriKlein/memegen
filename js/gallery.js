@@ -124,9 +124,8 @@ function managePic(pic) {
 }
 
 function drawPic(clonedPicTemp, pic) {
-    var img = clonedPicTemp.querySelectorAll('img');
-    clonedPicTemp.setAttribute('src', pic.url);
-    clonedPicTemp.setAttribute('onclick', 'enableEditor(this)');
-    clonedPicTemp.querySelectorAll('h1').textContent = pic.title;
-    clonedPicTemp.querySelectorAll('p').textContent = pic.desc;
+    clonedPicTemp.querySelector('img').setAttribute('src', pic.url);
+    clonedPicTemp.querySelector('img').setAttribute('onclick', 'enableEditor(this)');
+    clonedPicTemp.querySelector('h1').textContent = pic.title;
+    clonedPicTemp.querySelector('p').textContent = pic.desc;
 }
