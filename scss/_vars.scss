@@ -1,6 +1,6 @@
 // Media query per Galaxy S5 - screen width
 
-$container-width: 1063px;
+$container-width: 100%;
 $mobile-breakpoint: 360px;
 
 :root {
@@ -13,10 +13,11 @@ $mobile-breakpoint: 360px;
   /* Colors */
   --main-color: black;
   --sections-bg: #f0f0f0;
-  --nav_bg: #292929;
-  --nav_bar_txtcolor: #fff;
-  --about_bg: #2eb398;
-  --form_enter_txt_bg: #454545;
-  --form_bg: #323232;
-  --btn_send_bg: #2eb398;
+  --nav-bg: #292929;
+  --nav-bar-txtcolor: #fff;
+  --nav-item-hover: #2f907c;
+  --about-bg: #2eb398;
+  --form-enter-txt-bg: #454545;
+  --form-bg: #323232;
+  --btn-send-bg: #2eb398;
 }

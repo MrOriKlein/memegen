@@ -1,23 +1,22 @@
-  .main-nav-bar {
-    --main-nav-height: em(63px);  
-    height: var(--main-nav-height);
-    width: 100%;
-    background: var(--nav_bg);
-  }
+.main-nav-bar {
+  --main-nav-height: em(63px);  
+  height: var(--main-nav-height);
+  width: 100%;
+  background: var(--nav-bg);
+}
 
- 
+.main-nav__item:hover {
+  color: var(--nav-item-hover);
+}
+
 .main-nav__item {
   text-transform: uppercase;
-  font-size: rem-calc(7px);
-  margin: 2em;
-  color: var(--nav_bar_txtcolor);
-
+  margin: 1em;
+  color: var(--nav-bar-txtcolor);
+  @include for-mobile-only {
+    font-size: rem(10px);
+  }
 }
-.hover{
-    color: var(--hover_nav_item);
-
-}
-
 
 @media (max-width: $mobile-breakpoint) {
     .main-nav-bar {
@@ -27,6 +26,5 @@
     .main-nav__items {
       align-items: center;
       justify-content: space-around
-     
     }
 }

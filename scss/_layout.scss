@@ -13,8 +13,6 @@ img {
   border: solid 1px black;
   background-color: white;
   width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1em;
 }
 
 .main-nav-bar {
@@ -23,7 +21,7 @@ img {
 
 .main-display {
   border: solid 1px black;
-  background-color: yellow;
+  background-color: var(--sections-bg);
 }
 
 .gallery {
@@ -35,12 +33,11 @@ img {
 }
 
 .about {
-  background-color: green;
+  background-color: var(--about-bg);
 }
 
 .author {
   border: solid 1px black;
-  background-color: pink;
 } 
 
 .auth-img {
