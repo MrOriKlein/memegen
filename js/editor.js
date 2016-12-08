@@ -7,18 +7,18 @@ var gCtx;
 
 //Fonts handler for the meme's' top & bottom text
 var topTxt = {
-                color: '',
-                face: 'Comic Sans',
+                color: '#000000',
+                face: 'Arial',
                 size: 36,
-                txt: '',
+                txt: 'Top Header',
                 align: 'center'
 };
 
 var btmTxt = {
-                color: '',
-                face: '',
+                color: '#000000',
+                face: 'Arial',
                 size: 36,
-                txt: '',
+                txt: 'Bottom Footer',
                 align: 'center'
 };
 
@@ -44,11 +44,11 @@ function drawOnCanvas() {
     gFonts.topTxt.color = '#FF0000';
     // gFonts.topTxt.face = 'Andale Mono';
     // gFontsDB.topTxt.size = 40;
-    gFonts.topTxt.txt = 'One does not simply';
+    // gFonts.topTxt.txt = 'One does not simply';
     gFonts.btmTxt.color = '#00FF00';
-    gFonts.btmTxt.face = 'Arial';
+    // gFonts.btmTxt.face = 'Arial';
     // gFontsDB.btmTxt.size = 45;
-    gFonts.btmTxt.txt = 'depose the Illuminati';
+    // gFonts.btmTxt.txt = 'depose the Illuminati';
 
     var txtType1 = gFonts.topTxt.size + 'px "' + gFonts.topTxt.face + '"';
     var txtType2 = gFonts.btmTxt.size + 'px "' + gFonts.btmTxt.face + '"';
@@ -57,14 +57,14 @@ function drawOnCanvas() {
         gCtx.drawImage(img, 0, 0, 500, 360);
 
         gCtx.font = txtType1;
-        gCtx.txtAlign = gFonts.topTxt.align;
         gCtx.fillStyle = gFonts.topTxt.color;
-        gCtx.fillText(gFonts.topTxt.txt, 50, 80);
+        gCtx.textAlign = gFonts.topTxt.align;
+        gCtx.fillText(gFonts.topTxt.txt, 250, 80);
 
         gCtx.font = txtType2;
-        gCtx.txtAlign = gFonts.btmTxt.align;
+        gCtx.textAlign = gFonts.btmTxt.align;
         gCtx.fillStyle = gFonts.btmTxt.color;
-        gCtx.fillText(gFonts.btmTxt.txt, 50, 300);
+        gCtx.fillText(gFonts.btmTxt.txt, 250, 300);
     };
 }
 
@@ -80,12 +80,8 @@ function downloadImg(elLink) {
 
 // Handling the editing toolbars
 
-function incTxtSize(fontId) {
-    gFonts[fontId].size += 2;
-    drawOnCanvas();
-}
-function decTxtSize(fontId) {
-    gFonts[fontId].size -= 2;
+function modTxtSize(arg, fontId) {
+    gFonts[fontId].size += arg;
     drawOnCanvas();
 }
 
@@ -100,20 +96,34 @@ function setTxtAlign(alignment, fontId) {
     drawOnCanvas();
 }
 
+// Input text area handler
+
+var inputBoxTop = document.querySelector('.txtInputTop');
+inputBoxTop.onkeyup = function(){
+    gFonts.topTxt.txt = inputBoxTop.value;
+    drawOnCanvas();
+}
+var inputBoxBtm = document.querySelector('.txtInputBtm');
+inputBoxBtm.onkeyup = function(){
+    gFonts.btmTxt.txt = inputBoxBtm.value;
+    drawOnCanvas();
+}
+
+
 /******************/
 /* Drop down menu */
 /******************/
 
 //When the user clicks on the button, toggle between hiding and showing the dropdown content
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.querySelector('#myDropdown').classList.toggle('show');
 }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
 
-        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var dropdowns = document.getElementsByClassName('dropdown-content');
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
