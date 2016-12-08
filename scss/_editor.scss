@@ -1,5 +1,6 @@
 .meme-editor {
-    display: none;
+padding:20px;  
+    
 }
 
 .meme-txt {
@@ -7,20 +8,45 @@
 }
 
 .editor-text {
-    width: 100px;
+    
+    max-width: 100%;
 }
 
 .tool-box {
-    width: 100px;
+   
+    max-width: 100%;
 }
 
 .editors-box {
-    width: 300px;
+    border: 1px solid black;
+    max-width: 40%;
+  
+
     img {
         width: 30px;
         height: 30px;
     }
 }
+
+.canvas{
+     border: 1px solid black;
+    // width:35%;
+  
+}
+
+.dwn-btn{
+	  width: 90px;
+	  height: 37px;
+	  justify-content: flex-end;
+      background: #2eb398;
+      color: #e1e1e1;
+}
+.dwn-btn:hover {
+    border: 1px solid #253737;
+    text-shadow: #333333 0 1px 0;
+    background: #416b68;
+    color: #fff;
+ }
 .edtbtn {
     border: none;
     cursor: pointer;
