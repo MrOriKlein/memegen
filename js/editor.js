@@ -32,10 +32,7 @@ function initCanvas() {
     drawOnCanvas();
 }
 
-/****************************************************************/
-/* Demonstrates how to download a canvas as an image with a     */
-/* single direct click on a link.                               */
-/****************************************************************/
+
 function drawOnCanvas() {
     var img = new Image();
     img.src = "../img/meme.png";
@@ -71,7 +68,7 @@ function drawOnCanvas() {
 /********************************************************************/
 /* This is the function that will take care of image extraction and */
 /* setting proper filename for the download.                        */
-/* IMPORTANT: Call it from within a onclick event.                  */
+/* IMPORTANT: Call it from within an onclick event.                  */
 /********************************************************************/
 function downloadImg(elLink) {
     elLink.href = canvas.toDataURL();
