@@ -101,12 +101,12 @@ var gPics = [
     }
 ]
 
-var elPicTemp;
-var elContent;
+var gElPicTemp;
+var gElContent;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    elPicTemp = document.querySelector('#picTemplate');
-    elContent = document.querySelector('.gallery');
+    gElPicTemp = document.querySelector('#picTemplate');
+    gElContent = document.querySelector('.gallery');
     var pics = gPics;
     renderGallery(pics);
 });
@@ -116,17 +116,16 @@ function renderGallery(pics) {
 }
 
 function managePic(pic) {
-    var clonedPicTemp = elPicTemp.cloneNode(true);
+    var clonedPicTemp = gElPicTemp.cloneNode(true);
     // clonedPicTemp.setAttribute('id', 'pic-' + pic.id);
     drawPic(clonedPicTemp, pic);
     clonedPicTemp.style = 'display:block';
-    elContent.appendChild(clonedPicTemp);
+    gElContent.appendChild(clonedPicTemp);
 }
 
 function drawPic(clonedPicTemp, pic) {
-    var img = clonedPicTemp.querySelectorAll('img');
-    clonedPicTemp.setAttribute('src', pic.url);
-    clonedPicTemp.setAttribute('onclick', 'enableEditor(this)');
-    clonedPicTemp.querySelectorAll('h1').textContent = pic.title;
-    clonedPicTemp.querySelectorAll('p').textContent = pic.desc;
+    clonedPicTemp.querySelector('img').setAttribute('src', pic.url);
+    clonedPicTemp.querySelector('img').setAttribute('onclick', 'enableEditor(this)');
+    clonedPicTemp.querySelector('h1').textContent = pic.title;
+    clonedPicTemp.querySelector('p').textContent = pic.desc;
 }
