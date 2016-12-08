@@ -80,12 +80,8 @@ function downloadImg(elLink) {
 
 // Handling the editing toolbars
 
-function incTxtSize(fontId) {
-    gFonts[fontId].size += 2;
-    drawOnCanvas();
-}
-function decTxtSize(fontId) {
-    gFonts[fontId].size -= 2;
+function modTxtSize(arg, fontId) {
+    gFonts[fontId].size += arg;
     drawOnCanvas();
 }
 
@@ -106,7 +102,7 @@ function setTxtAlign(alignment, fontId) {
 
 //When the user clicks on the button, toggle between hiding and showing the dropdown content
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.querySelector("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it

@@ -59,6 +59,7 @@
 
                 <div class="editors-box" background-color="#FF0000">
                     <article class="meme-txt">
+                        <textarea class="textarea" placeholder="הקלד טקסט"></textarea>    
                         <div class="editor-text"><img src="assets/gfx/inputbox.png" /></div>
                         <div class="editor-toolbox">
                             <img src="assets/gfx/toolbar/delete.png" />
@@ -71,8 +72,8 @@
                                 </div>
                             </div>
                             <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="incTxtSize('topTxt')" />
-                            <img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="decTxtSize('topTxt')" />
+                            <img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="modTxtSize(1, 'topTxt')" />
+                            <img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="modTxtSize(-1, 'topTxt')" />
                             <img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign('right', 'topTxt')" />
                             <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'topTxt')" />
                             <img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign('left', 'topTxt')" />
