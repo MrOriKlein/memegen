@@ -101,12 +101,12 @@ var gPics = [
     }
 ]
 
-var elPicTemp;
-var elContent;
+var gElPicTemp;
+var gElContent;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    elPicTemp = document.querySelector('#picTemplate');
-    elContent = document.querySelector('.gallery');
+    gElPicTemp = document.querySelector('#picTemplate');
+    gElContent = document.querySelector('.gallery');
     var pics = gPics;
     renderGallery(pics);
 });
@@ -116,11 +116,11 @@ function renderGallery(pics) {
 }
 
 function managePic(pic) {
-    var clonedPicTemp = elPicTemp.cloneNode(true);
+    var clonedPicTemp = gElPicTemp.cloneNode(true);
     // clonedPicTemp.setAttribute('id', 'pic-' + pic.id);
     drawPic(clonedPicTemp, pic);
     clonedPicTemp.style = 'display:block';
-    elContent.appendChild(clonedPicTemp);
+    gElContent.appendChild(clonedPicTemp);
 }
 
 function drawPic(clonedPicTemp, pic) {
