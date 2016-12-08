@@ -8,6 +8,11 @@
     padding: 15px;
 }
 
+.contact-invite {
+    background-color: var(--form-bg);
+    width: 100%;
+}
+
 @media (max-width: $mobile-breakpoint) {
     .contact-us {
     justify-content: none;
@@ -15,13 +20,10 @@
     flex-wrap: wrap-reverse;
     }
     .contact-form {
-        background-color: darkorange;
         width: 100%;
-        
     }
     .contact-invite {
-        
-        background-color: deeppink;
-        width: 100%;
-    }
+    background-color: var(--form-bg);
+    width: 100%;
+    }           
 }
