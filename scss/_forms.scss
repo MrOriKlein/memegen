@@ -16,39 +16,44 @@
 //   margin: 1em 0;
 // }
 
+.contact-form{
+   background: #323232;
+   border: 1px solid black;
+}
 
 
 form {
-    background: --form_bg;
+    background: #323232;
     border: 1px solid black;
     overflow: hidden; 
+    max-width:580px;
+    margin-left: 30px;
+    font-size: rem(12px);
+    font-family: var(--primary-font);
+   
+
 }
 
 textarea{
 	background:var(--form_enter_txt_bg) no-repeat scroll 16px 16px; 
-    width: 276px;
-    height: 110px;
-    border: 1px solid black;
-    background-clip: padding-box; 
+    width: 580px;
+    height: 150px;
+  
+    // background-clip: padding-box; 
     display:block;
     color:#fff;
-    padding-left:45px;
-    padding-right:20px;
-    padding-top:12px;
-    margin-bottom:20px;
     overflow:hidden;
+    margin-bottom: 16px;
 }
 
 input {
-    width: 276px;
-    height: 48px;
-    border: 1px solid rgba(255,255,255,.4);
-    background-clip: padding-box; 
+    width: 580px;
+    height: 38px;
+       // background-clip: padding-box; 
     display:block;
     color:#fff;
-    padding-left:20px;
-    padding-right:20px;
-    margin-bottom:20px;
+    // padding-bottom: 16px;
+     margin-bottom: 16px;
 }
 
 input[type=submit] {
@@ -57,36 +62,35 @@ input[type=submit] {
 
 input.name {
 	  	background:var(--form_enter_txt_bg) no-repeat scroll 16px 16px; 
-	  padding-left:45px;
+     margin-bottom: 16px;
 }
 
 input.email {
 	  	background:var(--form_enter_txt_bg) no-repeat scroll 16px 20px;
-	  padding-left:45px;
+    padding-bottom: 16px;
 }
 
 input.message {
 	  	background:var(--form_enter_txt_bg)  no-repeat scroll 16px 16px;
-	  padding-left:45px;
+    padding-bottom: 16px;
 }
 
 input:focus, textarea:focus { 
-	  background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  background-color:#454545;
 	  overflow: hidden; 
 }
 
 .btn {
-	  width: 138px;
-	  height: 44px;
-	  border-radius: 4px;
-	  float:right;
+	  width: 90px;
+	  height: 37px;
+	  justify-content: flex-end;
     border: 1px solid #253737;
-    background: #416b68;
-    padding: 10.5px 21px;
-    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-    text-shadow: #333333 0 1px 0;
+    background: #2eb398;
     color: #e1e1e1;
+	  // border-radius: 4px;
+    // padding: 10.5px 21px;
+    // box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    // text-shadow: #333333 0 1px 0;
 }
 
 .btn:hover {
