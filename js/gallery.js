@@ -106,7 +106,7 @@ var gElContent;
 
 document.addEventListener("DOMContentLoaded", function(event) {
     gElPicTemp = document.querySelector('#picTemplate');
-    gElContent = document.querySelector('.gallery');
+    gElContent = document.querySelector('#categories');
     var pics = gPics;
     renderGallery(pics);
 });
