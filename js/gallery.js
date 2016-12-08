@@ -1,3 +1,5 @@
+'use strict';
+
 var gPics = [
     {   
         id: 1,
@@ -99,12 +101,32 @@ var gPics = [
     }
 ]
 
-var elMeet;
+var elPicTemp;
 var elContent;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    elMeet = document.querySelector('#picTemplate');
+    elPicTemp = document.querySelector('#picTemplate');
     elContent = document.querySelector('.gallery');
+    var pics = gPics;
+    renderGallery(pics);
 });
 
-function renderGallery() 
+function renderGallery(pics) {
+    pics.forEach(managePic);
+}
+
+function managePic(pic) {
+    var clonedPicTemp = elPicTemp.cloneNode(true);
+    // clonedPicTemp.setAttribute('id', 'pic-' + pic.id);
+    drawPic(clonedPicTemp, pic);
+    clonedPicTemp.style = 'display:block';
+    elContent.appendChild(clonedPicTemp);
+}
+
+function drawPic(clonedPicTemp, pic) {
+    var img = clonedPicTemp.querySelectorAll('img');
+    clonedPicTemp.setAttribute('src', pic.url);
+    clonedPicTemp.setAttribute('onclick', 'enableEditor(this)');
+    clonedPicTemp.querySelectorAll('h1').textContent = pic.title;
+    clonedPicTemp.querySelectorAll('p').textContent = pic.desc;
+}
