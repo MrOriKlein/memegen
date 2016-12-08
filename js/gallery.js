@@ -104,12 +104,12 @@ var gPics = [
 var gElPicTemp;
 var gElContent;
 
-document.addEventListener("DOMContentLoaded", function(event) {
+function initGallery() {
     gElPicTemp = document.querySelector('#picTemplate');
     gElContent = document.querySelector('#categories');
     var pics = gPics;
     renderGallery(pics);
-});
+};
 
 function renderGallery(pics) {
     pics.forEach(managePic);
