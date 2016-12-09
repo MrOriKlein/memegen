@@ -1,29 +1,51 @@
-.contact-form {
-    width: 60%;
-    padding: 15px;
-}
-
-.contact-invite {
-    width: 40%;
-    padding: 15px;
-}
-
-.contact-invite {
+.contact-us{
+    border: 1px solid white;
     background-color: var(--form-bg);
-    width: 100%;
+    color: #fff; 
 }
+.contact-invite-form{
+     border: 1px solid white;
+     width:60%;
+     
+}
+.contact-invite {
+     border: 1px solid white;
+    background-color: var(--form-bg);
+    color: #fff;
+    margin-bottom: 20px;
+}
+.contact-form {
+    border: 1px solid white;
+    background-color: var(--form-bg);
+    color: #fff;
+    
+}
+
+.contact-details{
+     border: 1px solid white;
+   background-color: var(--form-bg);
+   color: #fff;
+
+   img{
+    width: 20px;
+    height: 20px;
+    }
+}
+
 
 @media (max-width: $mobile-breakpoint) {
     .contact-us {
-    justify-content: none;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+
     }
-    .contact-form {
-        width: 100%;
+    .contact-invite-form{
+        flex-wrap: wrap;
     }
     .contact-invite {
-    background-color: var(--form-bg);
-    width: 100%;
-    }           
+        max-width:100%;
+    }
+
+               
+    .contact-form {
+      
+    }
 }
