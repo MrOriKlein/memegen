@@ -19,6 +19,7 @@
 }
 
 .main-nav-bar {
+  position:absolute;
   --main-nav-height: em(63px);  
   height: var(--main-nav-height);
   width: 100%;
