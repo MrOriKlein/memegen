@@ -10,5 +10,6 @@ function enableEditor(elHtml) {
     galleryHook.style = 'display:none';
     var editorHook = document.querySelector('.meme-editor');
     editorHook.style = 'display:flex';
-    function ()
+    var elPic = elHtml.getAttribute('src');
+    initCanvas(elPic)
 }
