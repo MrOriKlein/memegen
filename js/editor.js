@@ -26,16 +26,16 @@ var gFonts = { topTxt, btmTxt };
 
 // Functions
 
-function initCanvas() {
+function initCanvas(elPic) {
     gElCanvas = document.querySelector('canvas');
     gCtx = gElCanvas.getContext('2d');
-    drawOnCanvas();
+    drawOnCanvas(elPic);
 }
 
 
-function drawOnCanvas() {
+function drawOnCanvas(elPic) {
     var img = new Image();
-    img.src = "../img/meme.png";
+    img.src = elPic;
 
     // testing Font styling
     gFonts.topTxt.color = '#FF0000';
