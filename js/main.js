@@ -22,7 +22,7 @@ function initGallery() {
 
 // Injects editor's DOM elements for future call 
 function initEditor() {
-    
+    //Nothing for now
 }
 
 function enableEditor(picId) {

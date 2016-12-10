@@ -28,8 +28,12 @@ var gFonts = { topTxt, btmTxt };
 // Functions
 
 function initCanvas() {
-    gElCanvas = document.querySelector('canvas');
+    gElCanvas = document.querySelector('#myCanvas');
     gCtx = gElCanvas.getContext('2d');
+    gElCanvas.style.width = '100%';
+    gElCanvas.style.height = '100%';
+    gElCanvas.width = gElCanvas.offsetWidth;
+    gElCanvas.height = gElCanvas.offsetHeight;
     drawOnCanvas();
 }
 
@@ -52,17 +56,17 @@ function drawOnCanvas() {
     var txtType2 = gFonts.btmTxt.size + 'px "' + gFonts.btmTxt.face + '"';
 
     img.onload = function() {
-        gCtx.drawImage(img, 0, 0, 500, 360);
+        gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
 
         gCtx.font = txtType1;
         gCtx.fillStyle = gFonts.topTxt.color;
         gCtx.textAlign = gFonts.topTxt.align;
-        gCtx.fillText(gFonts.topTxt.txt, 250, 80);
+        gCtx.fillText(gFonts.topTxt.txt, gElCanvas.width/2, 80);
 
         gCtx.font = txtType2;
         gCtx.textAlign = gFonts.btmTxt.align;
         gCtx.fillStyle = gFonts.btmTxt.color;
-        gCtx.fillText(gFonts.btmTxt.txt, 250, 300);
+        gCtx.fillText(gFonts.btmTxt.txt, gElCanvas.width/2, 300);
     };
 }
 

@@ -40,9 +40,8 @@ padding:20px;
 }
 
 .canvas{
- 
-    // width:35%;
-  
+    width: 500px;
+    height: 360px;
 }
 
 .dwn-btn{
@@ -102,6 +101,18 @@ padding:20px;
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
+.paintBoard {
+    width: 500px;
+    height: 360px;
+    position: relative;
+}
+
+@media (max-width: $mobile-breakpoint){
+    .paintBoard {
+        width: 340px;
+    }
+}
+
 @media (max-width: $mobile-breakpoint){
     .meme-editor{
         flex-direction:column;
@@ -118,11 +129,8 @@ padding:20px;
        font-size: rem(13px);
        align-items:center;
     }
-    .canvas{
-        // max-width:350px;
-        // justify-content:center;
-    //    max-width:em(350px);
-    //    max-height:em(300px);             ;
-    }
-    
 }
+.canvas{
+        width:em(360px);
+        height:em(360px);
+    }
