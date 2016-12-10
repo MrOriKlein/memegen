@@ -63,14 +63,13 @@
                 </div>
 
                 <div class="editors-box flex flex-column" background-color="#FF0000">
-                    <div class="meme-txt">
-                        <br />
+                    <article class="meme-txt">
                         <div class="editor-text">
                             <textarea class="txtInputTop" placeholder="Insert your text"></textarea>
                         </div>
                         <br />
                         <div class="editor-toolbox">
-                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" />
+                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" onclick="clearTxt('Top', 'topTxt')" />
                             <div class="dropdown" id="dpdwn1">
                                 <img src="assets/gfx/toolbar/face-type.png" onclick="dropMenu('1')" class="dropbtn" />
                                 <div id="myDropdown1" class="dropdown-content">
@@ -81,13 +80,13 @@
                             <!--Editor Buttons will go here via JS-->
 
                         </div>
-                    </div>
+                    </article>
                     <article class="meme-txt">
                         <div class="editor-text">
                             <textarea class="txtInputBtm" placeholder="Insert your text"></textarea>
                         </div>
                         <div class="editor-toolbox">
-                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" />
+                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" onclick="clearTxt('Btm', 'btmTxt')" />
                             <div class="dropdown" id="dpdwn2">
                                 <img src="assets/gfx/toolbar/face-type.png" onclick="dropMenu('2')" class="dropbtn" />
                                 <div id="myDropdown2" class="dropdown-content">
@@ -111,10 +110,10 @@
 
             <article class="author flex flex-row">
                 <div class="auth-img hexagon">
-                    Avital Speiser
-                    <div class="face1"></div>
-                    <div class="face2"></div>
-                    <!--<img src="assets/gfx/authors/avital.jpg" />-->
+                    <!--Avital Speiser-->
+                    <img src="assets/gfx/authors/avital.jpg" />
+                    <!--<div class="face1"></div>-->
+                    <!--<div class="face2"></div>-->
                 </div>
                 <div class="auth-details">
                     <p class="auth-title">Avital</p>
@@ -176,6 +175,18 @@
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/editor.js"></script>
+    <script type="text/javascript">
+        function downloadJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "js/jscolor.js";
+            document.body.appendChild(element);
+            }
+            if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+            else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+            else window.onload = downloadJSAtOnload;
+    </script>
 </body>
 
 </html>

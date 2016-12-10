@@ -5,10 +5,12 @@
 var gElCanvas;
 var gCtx;
 var gEdtPic;
+var gInputBoxTop = document.querySelector('.txtInputTop');
+var gInputBoxBtm = document.querySelector('.txtInputBtm');
 
 //Fonts handler for the meme's' top & bottom text
 var topTxt = {
-                color: '#000000',
+                color: '#FFFFFF',
                 face: 'Arial',
                 size: 36,
                 txt: 'Top Header',
@@ -16,7 +18,7 @@ var topTxt = {
 };
 
 var btmTxt = {
-                color: '#000000',
+                color: '#FFFFFF',
                 face: 'Arial',
                 size: 36,
                 txt: 'Bottom Footer',
@@ -43,11 +45,11 @@ function drawOnCanvas() {
     img.src = gPics[gEdtPic - 1].url;
 
     // testing Font styling
-    gFonts.topTxt.color = '#FF0000';
+    // gFonts.topTxt.color = '#FF0000';
     // gFonts.topTxt.face = 'Andale Mono';
     // gFontsDB.topTxt.size = 40;
     // gFonts.topTxt.txt = 'One does not simply';
-    gFonts.btmTxt.color = '#00FF00';
+    // gFonts.btmTxt.color = '#00FF00';
     // gFonts.btmTxt.face = 'Arial';
     // gFontsDB.btmTxt.size = 45;
     // gFonts.btmTxt.txt = 'depose the Illuminati';
@@ -68,6 +70,12 @@ function drawOnCanvas() {
         gCtx.fillStyle = gFonts.btmTxt.color;
         gCtx.fillText(gFonts.btmTxt.txt, gElCanvas.width/2, 300);
     };
+}
+
+function setTextColor(picker) {
+	gFonts.topTxt.color = '#' + picker.toString();
+	gFonts.btmTxt.color = '#' + picker.toString();
+    drawOnCanvas();
 }
 
 //***************************************//
@@ -141,18 +149,34 @@ function setTxtAlign(alignment, fontId) {
     drawOnCanvas();
 }
 
-// Input text area handler
+function clearTxt(pos, fontId) {
+    var inputBox = window['gInputBox' + pos];
+    gFonts[fontId].color = "#FFFFFF";
+    gFonts[fontId].face = 'Arial';
+    gFonts[fontId].size = 36;
+    gFonts[fontId].align = 'center';
 
-var inputBoxTop = document.querySelector('.txtInputTop');
-inputBoxTop.onkeyup = function(){
-    gFonts.topTxt.txt = inputBoxTop.value;
+    if (pos === "Top") {
+        inputBox.value = '';
+        gFonts[fontId].txt = 'Top Header';
+    } else {
+        inputBox.value = '';
+        gFonts[fontId].txt = 'Bottom Footer';
+    }
     drawOnCanvas();
 }
-var inputBoxBtm = document.querySelector('.txtInputBtm');
-inputBoxBtm.onkeyup = function(){
-    gFonts.btmTxt.txt = inputBoxBtm.value;
+
+// Input text area handler
+gInputBoxTop.onkeyup = function(){
+    gFonts.topTxt.txt = gInputBoxTop.value;
     drawOnCanvas();
 }
+
+gInputBoxBtm.onkeyup = function(){
+    gFonts.btmTxt.txt = gInputBoxBtm.value;
+    drawOnCanvas();
+}
+
 
 
 /******************/

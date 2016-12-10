@@ -1829,9 +1829,11 @@ jsc.jscolor.lookupClass = 'jscolor';
 jsc.jscolor.installByClassName = function (className) {
 	var inputElms = document.getElementsByTagName('input');
 	var buttonElms = document.getElementsByTagName('button');
+	var imageElms = document.getElementsByTagName('img');
 
 	jsc.tryInstallOnElements(inputElms, className);
 	jsc.tryInstallOnElements(buttonElms, className);
+	jsc.tryInstallOnElements(imageElms, className);
 };
 
 

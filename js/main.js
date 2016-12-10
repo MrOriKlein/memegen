@@ -40,12 +40,12 @@ function injMenuOptions(menuId, pos) {
 
 function injEdtBtns(id, pos) {
     var domHook = document.querySelector('#dpdwn'+id);
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/txt-color.png"    class="edtbtn" />'
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="modTxtSize(1,           \'' + pos + '\')" />'
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="modTxtSize(-1,          \'' + pos + '\')" />'
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign(\'end\',    \'' + pos + '\')" />'
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign(\'center\', \'' + pos + '\')" />'
-    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign(\'start\',  \'' + pos + '\')" />'
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/txt-color.png"    class="edtbtn jscolor{onFineChange:\'setTextColor(this)\'}" />';
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="modTxtSize(1,           \'' + pos + '\')" />';
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="modTxtSize(-1,          \'' + pos + '\')" />';
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign(\'end\',    \'' + pos + '\')" />';
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign(\'center\', \'' + pos + '\')" />';
+    domHook.innerHTML += '<img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign(\'start\',  \'' + pos + '\')" />';
 }
 
 function enableEditor(picId) {
