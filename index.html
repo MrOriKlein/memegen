@@ -11,10 +11,11 @@
 </head>
 
 <body onload="initApp()">
+
     <!-- Displayed page area -->
     <main class="container">
-        <!--Nav bar-->
 
+        <!--Nav bar-->
         <nav class="main-nav-bar flex align-center justify-center">
 
             <ul class="main-nav__items clean-list flex justify-center">
@@ -60,7 +61,6 @@
                 <div class="paintBoard">
                     <canvas id="myCanvas" dir="ltr">Sorry, no canvas available</canvas>
                 </div>
-                <!--<div class="selected-image"></div>-->
 
                 <div class="editors-box flex flex-column" background-color="#FF0000">
                     <div class="meme-txt">
@@ -70,34 +70,16 @@
                         </div>
                         <br />
                         <div class="editor-toolbox">
-                            <img src="assets/gfx/toolbar/delete.png" />
-                            <div class="dropdown">
-                                <img src="assets/gfx/toolbar/face-type.png" onclick="myFunction()" class="dropbtn" />
-                                <div id="myDropdown" class="dropdown-content">
-                                    <p onclick="setTxtType(this, 'topTxt')">Arial</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Courier</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Courier New</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Helvatica</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Times</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Times New Roman</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Andale Mono</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Verdana</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Tahoma</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Impact</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Georgia</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Avant Garde</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Comic Sans MS</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Garamond</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Palatino</p>
-                                    <p onclick="setTxtType(this, 'topTxt')">Bookman</p>
+                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" />
+                            <div class="dropdown" id="dpdwn1">
+                                <img src="assets/gfx/toolbar/face-type.png" onclick="dropMenu('1')" class="dropbtn" />
+                                <div id="myDropdown1" class="dropdown-content">
+                                    <!--Menu Options go here via JS-->
                                 </div>
                             </div>
-                            <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png" class="edtbtn" onclick="modTxtSize(1, 'topTxt')" />
-                            <img src="assets/gfx/toolbar/size-down.png" class="edtbtn" onclick="modTxtSize(-1, 'topTxt')" />
-                            <img src="assets/gfx/toolbar/align-left.png" class="edtbtn" onclick="setTxtAlign('end', 'topTxt')" />
-                            <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'topTxt')" />
-                            <img src="assets/gfx/toolbar/align-right.png" class="edtbtn" onclick="setTxtAlign('start', 'topTxt')" />
+
+                            <!--Editor Buttons will go here via JS-->
+
                         </div>
                     </div>
                     <article class="meme-txt">
@@ -105,34 +87,16 @@
                             <textarea class="txtInputBtm" placeholder="Insert your text"></textarea>
                         </div>
                         <div class="editor-toolbox">
-                            <img src="assets/gfx/toolbar/delete.png" />
-                            <div class="dropdown">
-                                <img src="assets/gfx/toolbar/face-type.png" onclick="myFunction()" class="dropbtn" />
-                                <div id="myDropdown" class="dropdown-content">
-                                    <p onclick="setTxtType(this, 'btmTxt')">Arial</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Courier</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Courier New</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Helvatica</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Times</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Times New Roman</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Andale Mono</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Verdana</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Tahoma</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Impact</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Georgia</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Avant Garde</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Comic Sans MS</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Garamond</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Palatino</p>
-                                    <p onclick="setTxtType(this, 'btmTxt')">Bookman</p>
+                            <img src="assets/gfx/toolbar/delete.png" class="edtbtn" />
+                            <div class="dropdown" id="dpdwn2">
+                                <img src="assets/gfx/toolbar/face-type.png" onclick="dropMenu('2')" class="dropbtn" />
+                                <div id="myDropdown2" class="dropdown-content">
+                                    <!--Menu Options go here via JS-->
                                 </div>
                             </div>
-                            <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png" class="edtbtn" onclick="modTxtSize(1, 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/size-down.png" class="edtbtn" onclick="modTxtSize(-1, 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/align-left.png" class="edtbtn" onclick="setTxtAlign('right', 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/align-right.png" class="edtbtn" onclick="setTxtAlign('left', 'btmTxt')" />
+
+                            <!--Editor Buttons will go here via JS-->
+
                         </div>
                     </article>
                     <!--meme download button-->
@@ -146,8 +110,11 @@
         <section id="about" class="about space-between">
 
             <article class="author flex flex-row">
-                <div class="auth-img">
-                    <img src="assets/gfx/authors/avital.jpg" />
+                <div class="auth-img hexagon">
+                    Avital Speiser
+                    <div class="face1"></div>
+                    <div class="face2"></div>
+                    <!--<img src="assets/gfx/authors/avital.jpg" />-->
                 </div>
                 <div class="auth-details">
                     <p class="auth-title">Avital</p>
