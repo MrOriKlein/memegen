@@ -88,9 +88,8 @@
      color: var(--about_sec_header);
      font-family:var(--secondary-font); 
 }
-auth-about{
+.auth-about{
      color: #fff;
-}
 
 @media (max-width: $mobile-breakpoint) {
     .author {
