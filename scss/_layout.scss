@@ -10,59 +10,18 @@ img {
 }
 
 .container {
-  border: solid 1px black;
+ 
   background-color: white;
   width: var(--container-width);
 }
 
-.main-nav-bar {
-  border: solid 1px black;
- }
-
 .main-display {
-  border: solid 1px black;
-  background-color: var(--sections-bg);
-}
-
-.gallery {
-  border: solid 1px black;
-}
-
-.words-display {
-  border: solid 1px black;
+  background-color:#fff;
 }
 
 .about {
   background-color: var(--about-bg);
 }
-
-.author {
-  border: solid 1px black;
-} 
-
-.auth-img {
-    background-color: white;
-}
-
-
-.contact {
-  border: solid 1px black;
-  background-color: blue;
-}
-
-.footer {
-  border: solid 1px black;
-}
-
-// div {
-  // border: 5px solid black;
-// }
-// @mixin breakpoint($name){
-//   @if $name == small-screen {
-//     @media only screen and (min-width: $small-breakpoint) {
-//       @content
-//     }
-//   }
 
 @media (max-width: $mobile-breakpoint) {
   .container {
