@@ -70,6 +70,49 @@ function drawOnCanvas() {
     };
 }
 
+//***************************************//
+//** Text warp adaptation in progress **//
+//*************************************// 
+
+// function todo(ctx, text, fontColor) {
+//     var max_width  = gElCanvas.width;
+//     var fontSizeTop =  gFonts.topTxt.size;
+//     var fontSizeBtm =  gFonts.topBtm.size;
+//     var lines =  new Array();
+//     var width = 0, i, j;
+//     var result;
+//     var color = fontColor || "white";
+
+//     // Font and size is required for ctx.measureText()
+//     gCtx.font   = txtType1;
+
+    
+//     // Start calculation
+//     while ( text.length ) {
+//     	for( i=text.length; ctx.measureText(text.substr(0,i)).width > max_width; i-- );
+    
+//     	result = text.substr(0,i);
+    
+//     	if ( i !== text.length )
+//     		for( j=0; result.indexOf(" ",j) !== -1; j=result.indexOf(" ",j)+1 );
+    	
+//     	lines.push( result.substr(0, j|| result.length) );
+//     	width = Math.max( width, ctx.measureText(lines[ lines.length-1 ]).width );
+//     	text  = text.substr( lines[ lines.length-1 ].length, text.length );
+//     }
+    
+    
+//     // Calculate canvas size, add margin
+//     gCtx.canvas.width  = 14 + width;
+//     gCtx.canvas.height =  8 + ( fontSize + 5 ) * lines.length;
+
+//     // Render
+//     ctx.fillStyle = color;
+//     for ( i=0, j=lines.length; i<j; ++i ) {
+//     	ctx.fillText( lines[i], 8, 5 + fontSize + (fontSize+5) * i );
+//     }
+// }
+
 /********************************************************************/
 /* This is the function that will take care of image extraction and */
 /* setting proper filename for the download.                        */
@@ -117,8 +160,8 @@ inputBoxBtm.onkeyup = function(){
 /******************/
 
 //When the user clicks on the button, toggle between hiding and showing the dropdown content
-function myFunction() {
-    document.querySelector('#myDropdown').classList.toggle('show');
+function dropMenu(menuId) {
+    document.querySelector('#myDropdown' + menuId).classList.toggle('show');
 }
 
 // Close the dropdown menu if the user clicks outside of it
