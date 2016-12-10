@@ -52,6 +52,8 @@ input.name {
 	background-color: #454545; //no-repeat scroll 16px 16px; 
     margin-bottom: 16px;
     border:0px;
+    
+    
    
      
 }
@@ -65,13 +67,23 @@ input.email {
 input.message {
 	background-color: #454545;	
     padding-bottom: 16px;
-  
     //   background:var(--form_enter_txt_bg); no-repeat scroll 16px 16px;
 }
 
 input:focus, textarea:focus { 
 	  background-color: #454545;
 	  overflow: hidden; 
+}
+
+
+@media (max-width: $mobile-breakpoint) {
+    input:focus, textarea:focus { 
+	  overflow: hidden; 
+    }
+    
+    input.name {
+      overflow: hidden; 
+    }
 }
 
 .btn {
