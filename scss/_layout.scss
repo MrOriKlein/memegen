@@ -25,6 +25,12 @@ img {
   background-color: blue;
 }
 
+.footer p {
+  margin: 0px;
+  color : #FFFFFF;
+  font-size: 16px;
+}
+
 @media (max-width: $mobile-breakpoint) {
   .container {
     max-width: $mobile-breakpoint;
