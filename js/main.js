@@ -5,11 +5,11 @@ function initApp() {
     initGallery();
 }
 
-function enableEditor(elHtml) {
+function enableEditor(picId) {
+    gEdtPic = picId;
     var galleryHook = document.querySelector('.gallery');
     galleryHook.style = 'display:none';
     var editorHook = document.querySelector('.meme-editor');
     editorHook.style = 'display:flex';
-    var elPic = elHtml.getAttribute('src');
-    initCanvas(elPic)
+    initCanvas()
 }
