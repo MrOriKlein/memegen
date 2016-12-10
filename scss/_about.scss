@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 .hexagon {
   position: relative;
   margin: 100px auto;
@@ -62,7 +61,6 @@
 }
 
 
->>>>>>> 3b83f0b950ff053444dd73db1120f7170c7669d9
 .about {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +80,7 @@
         width:32px;
     }
 }
-<<<<<<< HEAD
+
 .auth-title{
    color: #fff;
    font-family:var(--secondary-font);
@@ -91,11 +89,10 @@
      color: var(--about_sec_header);
      font-family:var(--secondary-font); 
 }
-auth-about{
+.auth-about{
      color: #fff;
 }
-=======
->>>>>>> 3b83f0b950ff053444dd73db1120f7170c7669d9
+
 
 @media (max-width: $mobile-breakpoint) {
     .author {
