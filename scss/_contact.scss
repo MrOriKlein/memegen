@@ -35,13 +35,18 @@
 
 @media (max-width: $mobile-breakpoint) {
     .contact-us {
+        max-width:100%;
+        justify-content:none;
+        flex-wrap: wrap;
 
+        
     }
     .contact-invite-form{
-        flex-wrap: wrap;
+        width:100%;
+        align-items:center;
     }
     .contact-invite {
-        max-width:100%;
+        // max-width:100%;
     }
 
                
