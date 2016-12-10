@@ -59,19 +59,24 @@
   transform-origin: right top;
   transform: rotate(60deg) translate(110px, 0);
 }
+// end of hexagon
 
 .about {
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid black;
+  margin-top:20px;
 }
 
 .author {
   width: 45%;
+   border: 1px solid black;
 }
 
 .auth-details {
   justify-content: flex-start;
   padding: 15px;
+   border: 1px solid black;
 }
 .social-media{
   img{
@@ -84,14 +89,17 @@
   color: #fff;
   font-weight: bold;
   font-family:var(--secondary-font);
+   border: 1px solid black;
 }
 .auth-desc{
   color: var(--about_sec_header);
   font-family:var(--secondary-font); 
   font-weight: bold;
+   border: 1px solid black;
 }
 .auth-about{
   color: #fff;
+   border: 1px solid black;
 }
 
 @media (max-width: $mobile-breakpoint) {
