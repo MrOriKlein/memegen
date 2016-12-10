@@ -5,29 +5,34 @@ padding:20px;
 
 .meme-txt {
     width:600;
+    margin-bottom: 20px;
 }
 
 .txtInputBtm{
     width: 100%;
+    height:50px;
     background-color: #fff;
+    border-radius:4px;
 }
 .txtInputTop{
     width:100%;
+    height:50px;
     background-color: #fff;
+    border-radius:4px;    
 }
 .editor-text {
     max-width: 100%;
+
 }
 
 .tool-box {
     max-width: 100%;
+    
+    
 }
 
 .editors-box {
-    border: 1px solid black;
-    max-width: 40%;
-  
-
+    width:40%;
     img {
         width: 30px;
         height: 30px;
@@ -35,17 +40,21 @@ padding:20px;
 }
 
 .canvas{
-     border: 1px solid black;
+ 
     // width:35%;
   
 }
 
 .dwn-btn{
-	  width: 90px;
+	  width: 50%;
 	  height: 37px;
-	  justify-content: flex-end;
       background: #2eb398;
       color: #e1e1e1;
+      align-self:center;
+      border-radius:4px;
+      text-align:center;
+      padding:8px;
+      margin-top:20px;
 }
 .dwn-btn:hover {
     border: 1px solid #253737;
@@ -92,3 +101,28 @@ padding:20px;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+@media (max-width: $mobile-breakpoint){
+    .meme-editor{
+        flex-direction:column;
+        flex-wrap:wrap;
+        max-width:100%;
+        justify-content:none;
+        margin:20px;
+    }
+    .editors-box{
+        width:100%;
+        
+    }
+    .dwn-btn{
+       font-size: rem(13px);
+       align-items:center;
+    }
+    .canvas{
+        // max-width:350px;
+        // justify-content:center;
+    //    max-width:em(350px);
+    //    max-height:em(300px);             ;
+    }
+    
+}

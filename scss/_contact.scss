@@ -1,7 +1,7 @@
 .contact-us{
-    border: 1px solid white;
     background-color: var(--form-bg);
-    color: #fff; 
+    color: #fff;
+    padding:30px; 
 }
 .contact-invite-form{
      width:60%;
@@ -43,9 +43,11 @@
         flex-wrap: wrap;
         padding-left:15px;
         padding-right:15px;
-
-        
     }
+
+    .contact-details{
+        font-size: rem(17px);
+    }   
     .contact-invite-form{
         width:100%;
         align-items:center;
@@ -55,16 +57,10 @@
             .to-gt-in-tch{
                 font-size: rem(20px); 
             }
-     
+
         .contact-details{
             font-size: rem(17px);
         }   
     }
-    .contact-invite {
-        
-    }
-               
-    .contact-form {
-      
-    }
+    
 }
