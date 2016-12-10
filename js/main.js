@@ -31,7 +31,7 @@ function initEditor() {
 
 function injMenuOptions(menuId, pos) {
     var elMenuItems = document.querySelector('#myDropdown' + menuId);
-    var fonts = ['Arial', 'Courier', 'Times New Roman', 'Helvatica<'];
+    var fonts = ['Arial', 'Courier', 'Times New Roman', 'Helvatica'];
     for (var i = 0; i < fonts.length; ++i) {
         var str = '<p onclick="setTxtType(this, \'' + pos + '\')">' + fonts[i] + '</p>';
         elMenuItems.innerHTML += str;
