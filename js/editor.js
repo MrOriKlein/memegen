@@ -4,6 +4,7 @@
 // Declarations
 var gElCanvas;
 var gCtx;
+var gEdtPic;
 
 //Fonts handler for the meme's' top & bottom text
 var topTxt = {
@@ -26,16 +27,16 @@ var gFonts = { topTxt, btmTxt };
 
 // Functions
 
-function initCanvas(elPic) {
+function initCanvas() {
     gElCanvas = document.querySelector('canvas');
     gCtx = gElCanvas.getContext('2d');
-    drawOnCanvas(elPic);
+    drawOnCanvas();
 }
 
 
-function drawOnCanvas(elPic) {
+function drawOnCanvas() {
     var img = new Image();
-    img.src = elPic;
+    img.src = gPics[gEdtPic - 1].url;
 
     // testing Font styling
     gFonts.topTxt.color = '#FF0000';
