@@ -101,26 +101,14 @@ var gPics = [
     }
 ]
 
-var gElPicTemp;
-var gElContent;
-
-function initGallery() {
-    gElPicTemp = document.querySelector('#picTemplate');
-    gElContent = document.querySelector('#categories');
-    var pics = gPics;
-    renderGallery(pics);
-};
-
-function renderGallery(pics) {
-    pics.forEach(managePic);
-}
-
-function managePic(pic) {
-    var clonedPicTemp = gElPicTemp.cloneNode(true);
-    // clonedPicTemp.setAttribute('id', 'pic-' + pic.id);
-    drawPic(clonedPicTemp, pic);
-    clonedPicTemp.style = 'display:block';
-    gElContent.appendChild(clonedPicTemp);
+function renderGallery() {
+    gPics.forEach(function (pic) {
+        var clonedPicTemp = gElPicTemp.cloneNode(true);
+        // clonedPicTemp.setAttribute('id', 'pic-' + pic.id);
+        drawPic(clonedPicTemp, pic);
+        clonedPicTemp.style = 'display:block';
+        gElContent.appendChild(clonedPicTemp);
+    });
 }
 
 function drawPic(clonedPicTemp, pic) {
