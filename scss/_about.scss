@@ -11,6 +11,12 @@
     justify-content: flex-start;
     padding: 15px;
 }
+.social-media{
+    img{
+        height: 32px;
+        width:32px;
+    }
+}
 
 @media (max-width: $mobile-breakpoint) {
     .author {

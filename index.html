@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meme Generator</title>
     <link rel="stylesheet" href="dist/style.css">
+
 </head>
 
 <body onload="initApp()">
@@ -29,7 +30,7 @@
         <br />
         <div class="flex">
             <div class="arrow-wrap"></div>
-                <div class="arrow-down"></div>
+            <div class="arrow-down"></div>
             <div class="arrow-wrap"></div>
         </div>
         <!-- Gallery area -->
@@ -47,13 +48,13 @@
                 <ul id="categories" class="clr">
                 </ul>
             </div>
-                <li id="picTemplate" class="hide">
-                    <div id="">
-                        <img src=""></img>
-                        <h1>Pic Title</h1>
-                        <p>Description</p>
-                    </div>
-                </li>
+            <li id="picTemplate" class="hide">
+                <div id="">
+                    <img src=""></img>
+                    <h1>Pic Title</h1>
+                    <p>Description</p>
+                </div>
+            </li>
             <div class="meme-editor hide flex flex-row space-around align-center">
                 <!--<a href="">Back to gallery</a>-->
                 <div class="paintBoard">
@@ -67,7 +68,7 @@
                         <div class="editor-text">
                             <textarea class="txtInputTop" placeholder="Insert your text"></textarea>
                         </div>
-                        <br />    
+                        <br />
                         <div class="editor-toolbox">
                             <img src="assets/gfx/toolbar/delete.png" />
                             <div class="dropdown">
@@ -92,17 +93,17 @@
                                 </div>
                             </div>
                             <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="modTxtSize(1, 'topTxt')" />
-                            <img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="modTxtSize(-1, 'topTxt')" />
-                            <img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign('end', 'topTxt')" />
+                            <img src="assets/gfx/toolbar/size-up.png" class="edtbtn" onclick="modTxtSize(1, 'topTxt')" />
+                            <img src="assets/gfx/toolbar/size-down.png" class="edtbtn" onclick="modTxtSize(-1, 'topTxt')" />
+                            <img src="assets/gfx/toolbar/align-left.png" class="edtbtn" onclick="setTxtAlign('end', 'topTxt')" />
                             <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'topTxt')" />
-                            <img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign('start', 'topTxt')" />
+                            <img src="assets/gfx/toolbar/align-right.png" class="edtbtn" onclick="setTxtAlign('start', 'topTxt')" />
                         </div>
                     </div>
                     <article class="meme-txt">
                         <div class="editor-text">
                             <textarea class="txtInputBtm" placeholder="Insert your text"></textarea>
-                        </div>    
+                        </div>
                         <div class="editor-toolbox">
                             <img src="assets/gfx/toolbar/delete.png" />
                             <div class="dropdown">
@@ -127,17 +128,17 @@
                                 </div>
                             </div>
                             <img src="assets/gfx/toolbar/txt-color.png" />
-                            <img src="assets/gfx/toolbar/size-up.png"      class="edtbtn" onclick="modTxtSize(1, 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/size-down.png"    class="edtbtn" onclick="modTxtSize(-1, 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/align-left.png"   class="edtbtn" onclick="setTxtAlign('right', 'btmTxt')" />
+                            <img src="assets/gfx/toolbar/size-up.png" class="edtbtn" onclick="modTxtSize(1, 'btmTxt')" />
+                            <img src="assets/gfx/toolbar/size-down.png" class="edtbtn" onclick="modTxtSize(-1, 'btmTxt')" />
+                            <img src="assets/gfx/toolbar/align-left.png" class="edtbtn" onclick="setTxtAlign('right', 'btmTxt')" />
                             <img src="assets/gfx/toolbar/align-center.png" class="edtbtn" onclick="setTxtAlign('center', 'btmTxt')" />
-                            <img src="assets/gfx/toolbar/align-right.png"  class="edtbtn" onclick="setTxtAlign('left', 'btmTxt')" />
+                            <img src="assets/gfx/toolbar/align-right.png" class="edtbtn" onclick="setTxtAlign('left', 'btmTxt')" />
                         </div>
                     </article>
                     <!--meme download button-->
                     <a class="dwn-btn" onclick="downloadImg(this)">Download</a>
                 </div>
-                
+
             </div>
         </section>
 
@@ -151,6 +152,11 @@
                 <div class="auth-details">
                     <p class="auth-title">Avital</p>
                     <p class="auth-desc">Front-End Dev</p>
+                    <div class="social-media flex flex-row">
+                       <a href="https://www.facebook.com/Avital.Barzelai"><img src="assets/gfx/authors/facebook.png"/></a>
+                       <a href="https://il.linkedin.com/in/avital-speiser-barzelai-a1793224"><img src="assets/gfx/authors/linkedin.png"/></a> 
+                       <a href="https://www.instagram.com/nookeet/"><img src="assets/gfx/authors/instagram.png"/></a>                    
+                    </div>
                 </div>
             </article>
 
@@ -172,20 +178,20 @@
                     <p class="to-gt-in-tch">In order to get in touch use the form below:</p>
                 </div>
                 <div class="contact-form">
-                <!--form section-->
-                <form class="flex flex-wrap flex-column">
-                    <input name="name" placeholder="Name? (required)" class="name" required />
-                    <input name="emailaddress" placeholder="Email? (required)" class="email" type="email" required />
-                    <textarea rows="4" cols="50" name="subject" placeholder="Write your message here..." class="message" required></textarea>
-                    <input name="submit" class="btn" type="submit" value="Send" />
-                </form>
+                    <!--form section-->
+                    <form class="flex flex-wrap flex-column">
+                        <input name="name" placeholder="Name? (required)" class="name" required />
+                        <input name="emailaddress" placeholder="Email? (required)" class="email" type="email" required />
+                        <textarea rows="4" cols="50" name="subject" placeholder="Write your message here..." class="message" required></textarea>
+                        <input name="submit" class="btn" type="submit" value="Send" />
+                    </form>
                 </div>
             </div>
             <div class="contact-details">
                 <p class="love"> We would love to hear from you! You can also reach us here:</p>
                 <p class="address"><img src="assets/gfx/contact/iconLocation.png" /> Habonim 4, Ramat-Gan, Israel</p>
                 <p class="phone"><img src="assets/gfx/contact/iconCall.png" /> 1-800-3825-968</p>
-                <p class="email"><img src="assets/gfx/contact/iconEmail.png"/> admin@company.com</p>
+                <p class="email"><img src="assets/gfx/contact/iconEmail.png" /> admin@company.com</p>
             </div>
         </section>
 
